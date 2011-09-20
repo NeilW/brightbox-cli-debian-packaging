@@ -1,3 +1,11 @@
+brightbox-cli (0.13.0-0ubuntu1) natty; urgency=low
+
+  * Tighten up dependencies.
+  * Fix bash completion entries
+  * Remove vendor patch merged into upstream
+
+ -- Neil Wilson <neil@aldur.co.uk>  Tue, 20 Sep 2011 19:46:44 +0100
+
 brightbox-cli (0.13.0-0ubuntu0) lucid; urgency=low
 
   * New upstream release 
