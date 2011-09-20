@@ -21,6 +21,8 @@ Depends: libbrightbox-cli-ruby (= ${binary:Version}), ${misc:Depends}
 Description: CLI for the Brightbox cloud computing platform
  brightbox-cli provides tools for interacting with the Brightbox cloud
  platform
+ .
+ This package is a dependency package. 
 
 Package: libbrightbox-cli-ruby
 Replaces: libbbcloud-ruby (<< 0.13)
