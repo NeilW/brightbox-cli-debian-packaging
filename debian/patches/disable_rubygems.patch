@@ -1,0 +1,7 @@
+diff --git a/lib/brightbox-cli/os_config.rb b/lib/brightbox-cli/os_config.rb
+new file mode 100644
+index 0000000..34ae18f
+--- /dev/null
++++ b/lib/brightbox-cli/os_config.rb
+@@ -0,0 +1 @@
++DISABLE_RUBYGEMS=1
