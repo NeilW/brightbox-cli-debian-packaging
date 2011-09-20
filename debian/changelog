@@ -1,3 +1,11 @@
+brightbox-cli (0.13.0-0ubuntu0) lucid; urgency=low
+
+  * New upstream release 
+  * Rename package from bbcloud to brightbox-cli
+  * Switch to dpkg-source 3.0 (quilt) format
+
+ -- Neil Wilson <neil@aldur.co.uk>  Tue, 20 Sep 2011 11:45:47 +0100
+
 bbcloud (0.12.0-0ubuntu0) lucid; urgency=low
 
   * Upgrades fog, gli and fixes --help issues
