@@ -10,15 +10,17 @@ Depends: brightbox-cli, ${misc:Depends}
 Architecture: all
 Section: oldlibs
 Description: Transitional package for brightbox-cli
- This is a transitional package and can be safely removed after brightbox-cli is installed.
+ This is a transitional package and can be safely removed after
+ brightbox-cli is installed.
 
 Package: brightbox-cli
 Replaces: bbcloud (<< 0.13)
 Breaks: bbcloud (<< 0.13)
 Architecture: all
-Depends: libbrightbox-cli-ruby (= ${binary:Version}), ${misc:Depend}
+Depends: libbrightbox-cli-ruby (= ${binary:Version}), ${misc:Depends}
 Description: CLI for the Brightbox cloud computing platform
- brightbox-cli provides tools for interacting with the Brightbox cloud platform
+ brightbox-cli provides tools for interacting with the Brightbox cloud
+ platform
 
 Package: libbrightbox-cli-ruby
 Replaces: libbbcloud-ruby (<< 0.13)
@@ -26,10 +28,11 @@ Breaks: libbbcloud-ruby (<< 0.13)
 Architecture: all
 Depends: libbrightbox-cli-ruby1.8(= ${binary:Version}), ${misc:Depends}
 Description: CLI for the Brightbox cloud computing platform
- bbcloud provides tools for interacting with the Brightbox cloud platform
+ brightbox-cli provides tools for interacting with the Brightbox cloud
+ platform
  .
  This package is a dependency package, which depends on the package
- containing the actual bbcloud package for the default Ruby version
+ containing the actual brightbox-cli package for the default Ruby version
  (currently 1.8).
 
 Package: libbrightbox-cli-ruby1.8
@@ -40,7 +43,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, ruby1.8,
  libnet-ssh2-ruby, libnokogiri-ruby, libjson-ruby, libmime-types-ruby,
  libhmac-ruby, libbuilder-ruby, libopenssl-ruby1.8
 Description: CLI for the Brightbox cloud computing platform
- bbcloud1.8 provides tools for interacting with the Brightbox cloud platform
+ brightbox-cli provides tools for interacting with the Brightbox cloud
+ platform
  .
  This package contains the CLI for the Brightbox cloud computing platform for 
  Ruby 1.8.
