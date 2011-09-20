@@ -6,7 +6,7 @@ Build-Depends: cdbs, debhelper (>= 5.0.0), ruby-pkg-tools (>= 0.14), ruby1.8-dev
 Standards-Version: 3.9.1
 
 Package: bbcloud
-Depends: brightbox-cli, ${misc:Depends}
+Depends: brightbox-cli (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Section: oldlibs
 Description: Transitional package for brightbox-cli
@@ -38,8 +38,8 @@ Description: CLI for the Brightbox cloud computing platform
  (currently 1.8).
 
 Package: libbrightbox-cli-ruby1.8
-Replaces: libbbcloud-ruby1.8
-Breaks: libbbcloud-ruby1.8
+Replaces: libbbcloud-ruby1.8 (<< 0.13)
+Breaks: libbbcloud-ruby1.8 (<< 0.13)
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ruby1.8,
  libnet-ssh2-ruby, libnokogiri-ruby, libjson-ruby, libmime-types-ruby,
