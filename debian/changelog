@@ -1,3 +1,10 @@
+brightbox-cli (0.14.0-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+  * debian/patches/vendored-gems.patch: Updated to new gems
+
+ -- Neil Wilson <neil@aldur.co.uk>  Mon, 10 Oct 2011 13:04:18 +0100
+
 brightbox-cli (0.13.0-0ubuntu1) natty; urgency=low
 
   * Tighten up dependencies.
