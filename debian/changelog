@@ -1,3 +1,9 @@
+brightbox-cli (0.14.1-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+
+ -- Neil Wilson <neil@aldur.co.uk>  Thu, 13 Oct 2011 10:49:00 +0100
+
 brightbox-cli (0.14.0-0ubuntu1) natty; urgency=low
 
   * New upstream release
