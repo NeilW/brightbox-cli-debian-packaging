@@ -1,8 +1,21 @@
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/Gemfile b/lib/brightbox-cli/vendor/excon-0.6.6/Gemfile
+diff --git a/brightbox-cli.gemspec b/brightbox-cli.gemspec
+index 33ad03d..c0ddfde 100644
+--- a/brightbox-cli.gemspec
++++ b/brightbox-cli.gemspec
+@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
+   s.add_dependency 'json', '~> 1.5.3'
+   s.add_dependency 'hirb', '0.3.5'
+   s.add_dependency 'formatador', '~> 0.2.0'
+-  s.add_dependency 'excon', '~> 0.6.1'
++  s.add_dependency 'excon', '~>0.7.3'
+   s.add_dependency 'builder'
+   s.add_dependency 'mime-types'
+   s.add_dependency 'net-scp', '~> 1.0.4'
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/Gemfile b/lib/brightbox-cli/vendor/excon-0.7.6/Gemfile
 new file mode 100644
 index 0000000..4f71f9c
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/Gemfile
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/Gemfile
 @@ -0,0 +1,14 @@
 +source "http://rubygems.org"
 +
@@ -18,11 +31,11 @@ index 0000000..4f71f9c
 +  gem 'streamly_ffi'
 +  gem 'curb'
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/README.rdoc b/lib/brightbox-cli/vendor/excon-0.6.6/README.rdoc
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/README.rdoc b/lib/brightbox-cli/vendor/excon-0.7.6/README.rdoc
 new file mode 100644
 index 0000000..12a8924
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/README.rdoc
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/README.rdoc
 @@ -0,0 +1,130 @@
 += excon
 +
@@ -154,11 +167,11 @@ index 0000000..12a8924
 +LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 +OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 +WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/Rakefile b/lib/brightbox-cli/vendor/excon-0.6.6/Rakefile
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/Rakefile b/lib/brightbox-cli/vendor/excon-0.7.6/Rakefile
 new file mode 100644
 index 0000000..c897e47
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/Rakefile
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/Rakefile
 @@ -0,0 +1,143 @@
 +require 'rubygems'
 +require 'rake'
@@ -303,11 +316,11 @@ index 0000000..c897e47
 +    exit!
 +  end
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/class_vs_lambda.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/class_vs_lambda.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/class_vs_lambda.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/class_vs_lambda.rb
 new file mode 100644
 index 0000000..6f902ee
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/class_vs_lambda.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/class_vs_lambda.rb
 @@ -0,0 +1,50 @@
 +require 'rubygems'
 +require 'tach'
@@ -359,11 +372,11 @@ index 0000000..6f902ee
 +#  +--------+----------+
 +  
 +
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/concat_vs_insert.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/concat_vs_insert.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/concat_vs_insert.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/concat_vs_insert.rb
 new file mode 100644
 index 0000000..237a973
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/concat_vs_insert.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/concat_vs_insert.rb
 @@ -0,0 +1,21 @@
 +require 'rubygems'
 +require 'tach'
@@ -387,11 +400,11 @@ index 0000000..237a973
 +# | concat | 0.998904 |
 +# +--------+----------+
 \ No newline at end of file
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/concat_vs_interpolate.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/concat_vs_interpolate.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/concat_vs_interpolate.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/concat_vs_interpolate.rb
 new file mode 100644
 index 0000000..bd2b7d9
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/concat_vs_interpolate.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/concat_vs_interpolate.rb
 @@ -0,0 +1,21 @@
 +require 'rubygems'
 +require 'tach'
@@ -415,11 +428,11 @@ index 0000000..bd2b7d9
 +# | interpolate | 0.019667 |
 +# +-------------+----------+
 \ No newline at end of file
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/cr_lf.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/cr_lf.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/cr_lf.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/cr_lf.rb
 new file mode 100644
 index 0000000..77adc33
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/cr_lf.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/cr_lf.rb
 @@ -0,0 +1,21 @@
 +require 'rubygems'
 +require 'tach'
@@ -443,11 +456,11 @@ index 0000000..77adc33
 +# | string   | 0.893602 |
 +# +----------+----------+
 \ No newline at end of file
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/downcase-eq-eq_vs_casecmp.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/downcase-eq-eq_vs_casecmp.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/downcase-eq-eq_vs_casecmp.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/downcase-eq-eq_vs_casecmp.rb
 new file mode 100644
 index 0000000..b36e993
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/downcase-eq-eq_vs_casecmp.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/downcase-eq-eq_vs_casecmp.rb
 @@ -0,0 +1,169 @@
 +# Copied from my benchmark_hell repo: github.com/sgonyea/benchmark_hell
 +
@@ -618,11 +631,11 @@ index 0000000..b36e993
 +casecmp2           0.820000   0.000000   0.820000 (  0.817689)
 +casecmp2-1         0.680000   0.000000   0.680000 (  0.685121)
 +=end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/excon.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/excon.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/excon.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/excon.rb
 new file mode 100644
 index 0000000..5196730
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/excon.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/excon.rb
 @@ -0,0 +1,69 @@
 +require 'rubygems' if RUBY_VERSION < '1.9'
 +require 'bundler'
@@ -693,11 +706,11 @@ index 0000000..5196730
 +
 +  end
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/excon_vs.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/excon_vs.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/excon_vs.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/excon_vs.rb
 new file mode 100644
 index 0000000..7d16969
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/excon_vs.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/excon_vs.rb
 @@ -0,0 +1,165 @@
 +require 'rubygems' if RUBY_VERSION < '1.9'
 +require 'bundler'
@@ -864,11 +877,11 @@ index 0000000..7d16969
 +# +--------------------------+----------+
 +# | em-http-request          | 4.123798 |
 +# +--------------------------+----------+
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/for_vs_array_each.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/for_vs_array_each.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/for_vs_array_each.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/for_vs_array_each.rb
 new file mode 100644
 index 0000000..b88f449
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/for_vs_array_each.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/for_vs_array_each.rb
 @@ -0,0 +1,27 @@
 +require 'rubygems'
 +require 'tach'
@@ -897,11 +910,11 @@ index 0000000..b88f449
 +# | each | 2.983550 |
 +# +------+----------+
 +# 
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/for_vs_hash_each.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/for_vs_hash_each.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/for_vs_hash_each.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/for_vs_hash_each.rb
 new file mode 100644
 index 0000000..c4db5ef
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/for_vs_hash_each.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/for_vs_hash_each.rb
 @@ -0,0 +1,27 @@
 +require 'rubygems'
 +require 'tach'
@@ -930,11 +943,11 @@ index 0000000..c4db5ef
 +# | for  | 2.949512 |
 +# +------+----------+
 +#
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/has_key-vs-hash[key].rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/has_key-vs-hash[key].rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/has_key-vs-hash[key].rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/has_key-vs-hash[key].rb
 new file mode 100755
 index 0000000..95d6a3f
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/has_key-vs-hash[key].rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/has_key-vs-hash[key].rb
 @@ -0,0 +1,177 @@
 +# Copied from my benchmark_hell repo: github.com/sgonyea/benchmark_hell
 +
@@ -1113,11 +1126,11 @@ index 0000000..95d6a3f
 +Hash#[] (if statement)        0.830000   0.000000   0.830000 (  0.832323)
 +Hash#[] (non-existant)        0.790000   0.010000   0.800000 (  0.791689)
 +=end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/headers_case_sensitivity.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/headers_case_sensitivity.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/headers_case_sensitivity.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/headers_case_sensitivity.rb
 new file mode 100644
 index 0000000..85aa513
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/headers_case_sensitivity.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/headers_case_sensitivity.rb
 @@ -0,0 +1,83 @@
 +require 'rubygems'
 +require 'stringio'
@@ -1203,11 +1216,11 @@ index 0000000..85aa513
 +  end
 +end
 \ No newline at end of file
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/headers_split_vs_match.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/headers_split_vs_match.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/headers_split_vs_match.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/headers_split_vs_match.rb
 new file mode 100644
 index 0000000..276c366
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/headers_split_vs_match.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/headers_split_vs_match.rb
 @@ -0,0 +1,34 @@
 +require 'rubygems'
 +require 'tach'
@@ -1243,11 +1256,11 @@ index 0000000..276c366
 +# +-------+----------+----------+
 +# | split | 4.393218 | 4.393218 |
 +# +-------+----------+----------+
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/implicit_block-vs-explicit_block.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/implicit_block-vs-explicit_block.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/implicit_block-vs-explicit_block.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/implicit_block-vs-explicit_block.rb
 new file mode 100644
 index 0000000..7337b4e
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/implicit_block-vs-explicit_block.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/implicit_block-vs-explicit_block.rb
 @@ -0,0 +1,98 @@
 +# Copied from my benchmark_hell repo: github.com/sgonyea/benchmark_hell
 +
@@ -1347,11 +1360,11 @@ index 0000000..7337b4e
 +explicit   2.630000   0.010000   2.640000 (  2.637658)
 +implicit   1.070000   0.000000   1.070000 (  1.073589)
 +=end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/merging.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/merging.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/merging.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/merging.rb
 new file mode 100644
 index 0000000..7674e3f
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/merging.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/merging.rb
 @@ -0,0 +1,21 @@
 +require 'rubygems'
 +require 'tach'
@@ -1374,11 +1387,11 @@ index 0000000..7674e3f
 +  end
 +
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/string_ranged_index.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/string_ranged_index.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/string_ranged_index.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/string_ranged_index.rb
 new file mode 100644
 index 0000000..68c2fdc
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/string_ranged_index.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/string_ranged_index.rb
 @@ -0,0 +1,87 @@
 +# Copied from my benchmark_hell repo: github.com/sgonyea/benchmark_hell
 +
@@ -1467,11 +1480,11 @@ index 0000000..68c2fdc
 +ranged index   0.680000   0.000000   0.680000 (  0.686510)
 +coordinates    0.620000   0.000000   0.620000 (  0.624269)
 +=end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/strip_newline.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/strip_newline.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/strip_newline.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/strip_newline.rb
 new file mode 100644
 index 0000000..88a964f
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/strip_newline.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/strip_newline.rb
 @@ -0,0 +1,115 @@
 +# require 'benchmark'
 +# 
@@ -1589,11 +1602,11 @@ index 0000000..88a964f
 +# | index  | 1.557975 | 1.557975 |
 +# +--------+----------+----------+
 \ No newline at end of file
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/vs_stdlib.rb b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/vs_stdlib.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/vs_stdlib.rb b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/vs_stdlib.rb
 new file mode 100644
 index 0000000..fca9a1e
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/benchmarks/vs_stdlib.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/benchmarks/vs_stdlib.rb
 @@ -0,0 +1,82 @@
 +require 'rubygems' if RUBY_VERSION < '1.9'
 +
@@ -1677,12 +1690,83 @@ index 0000000..fca9a1e
 +
 +  end
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/changelog.txt b/lib/brightbox-cli/vendor/excon-0.6.6/changelog.txt
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/changelog.txt b/lib/brightbox-cli/vendor/excon-0.7.6/changelog.txt
 new file mode 100644
-index 0000000..339a51b
+index 0000000..56c3e5b
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/changelog.txt
-@@ -0,0 +1,61 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/changelog.txt
+@@ -0,0 +1,132 @@
++0.7.6 10/04/11
++==============
++
++* fixes to provide for using openssl-nonblock for 1.8.x
++* correctly pass per-request settings to socket
++* fix for nonblocking stuff when waiting for socket close
++* use 127.0.0.1 instead of localhost in tests (fixes some errors)
++
++0.7.5 10/03/11
++==============
++
++* convert port to integer in sockaddr_in (jruby won't convert for you)
++
++0.7.4 09/30/11
++==============
++
++* rescue write would block from openssl
++
++0.7.3 09/27/11
++==============
++
++* fix nonblocking read to avoid reading past chunk in chunked encoded
++* rescue read would block from openssl
++
++0.7.2 09/24/11
++==============
++
++* fix buffer drain for socket#write. thanks dpiddy
++* rescue/retry timeout errors for idempotent requests. thanks dpiddy
++* timeouts should raise an excon specific error
++
++0.7.1 09/13/11
++==============
++
++* use nonblocking only when available (skip for 1.8.x SSL)
++
++0.7.0 09/12/11
++==============
++
++* change connects and most read/writes to use nonblocking methods
++* provide connect/read/write timeouts
++
++0.6.6 09/06/11
++==============
++
++* cleanup/refactoring. thanks nextmat
++* default to connection close as request delimiter
++
++0.6.5 07/13/11
++==============
++
++* properly stream responses with proc
++* fix mock with block to match real requests
++
++0.6.4 07/05/11
++==============
++
++* add block support to mocks. thanks dmeiz
++* fixes for stub matching. thanks dmeiz
++* don't do post_connection_check if verify mode is off
++* check excon state for verify mode instead of checking OpenSSL constants
++* use RbConfig to find OS. thanks trym
++* fixes for idempotent/retry. thanks lstoll
++
++0.6.3 05/02/11
++==============
++
++* fixes for header parsing to allow whitespace after :. thanks myronmarston
++* get_header optimization. thanks nextmat
++* rewind body on retry. thanks pweldon
++
 +0.6.2 04/11/11
 +==============
 +
@@ -1744,12 +1828,12 @@ index 0000000..339a51b
 +* header comparison for responses is now case insensitive
 +* change to allow :idempotent => false to operate correctly
 +* misc cleanup
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/excon.gemspec b/lib/brightbox-cli/vendor/excon-0.6.6/excon.gemspec
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/excon.gemspec b/lib/brightbox-cli/vendor/excon-0.7.6/excon.gemspec
 new file mode 100644
-index 0000000..3785955
+index 0000000..d6ef7b8
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/excon.gemspec
-@@ -0,0 +1,114 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/excon.gemspec
+@@ -0,0 +1,117 @@
 +## This is the rakegem gemspec template. Make sure you read and understand
 +## all of the comments. Some sections require modification, and others can
 +## be deleted if you don't need them. Once you understand the contents of
@@ -1765,8 +1849,8 @@ index 0000000..3785955
 +  ## If your rubyforge_project name is different, then edit it and comment out
 +  ## the sub! line in the Rakefile
 +  s.name              = 'excon'
-+  s.version           = '0.6.6'
-+  s.date              = '2011-09-06'
++  s.version           = '0.7.6'
++  s.date              = '2011-10-04'
 +  s.rubyforge_project = 'excon'
 +
 +  ## Make sure your summary is short. The description may be as long
@@ -1842,6 +1926,8 @@ index 0000000..3785955
 +    lib/excon/constants.rb
 +    lib/excon/errors.rb
 +    lib/excon/response.rb
++    lib/excon/socket.rb
++    lib/excon/ssl_socket.rb
 +    tests/basic_tests.rb
 +    tests/header_tests.rb
 +    tests/idempotent_tests.rb
@@ -1852,6 +1938,7 @@ index 0000000..3785955
 +    tests/rackups/query_string.ru
 +    tests/rackups/request_methods.ru
 +    tests/rackups/response_header.ru
++    tests/rackups/ssl.ru
 +    tests/rackups/thread_safety.ru
 +    tests/request_method_tests.rb
 +    tests/stub_tests.rb
@@ -1864,16 +1951,17 @@ index 0000000..3785955
 +  ## matches what you actually use.
 +  s.test_files = s.files.select { |path| path =~ /^[spec|tests]\/.*_[spec|tests]\.rb/ }
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon.rb b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon.rb b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon.rb
 new file mode 100644
-index 0000000..72be633
+index 0000000..7c42f50
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon.rb
-@@ -0,0 +1,89 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon.rb
+@@ -0,0 +1,92 @@
 +$:.unshift(File.dirname(__FILE__)) unless
 +  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
 +
 +require 'cgi'
++require 'forwardable'
 +require 'openssl'
 +require 'rbconfig'
 +require 'socket'
@@ -1883,6 +1971,8 @@ index 0000000..72be633
 +require 'excon/connection'
 +require 'excon/errors'
 +require 'excon/response'
++require 'excon/socket'
++require 'excon/ssl_socket'
 +
 +module Excon
 +  class << self
@@ -1959,12 +2049,12 @@ index 0000000..72be633
 +    end
 +  end
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/connection.rb b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/connection.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/connection.rb b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/connection.rb
 new file mode 100644
-index 0000000..1e522e6
+index 0000000..97135e3
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/connection.rb
-@@ -0,0 +1,314 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/connection.rb
+@@ -0,0 +1,252 @@
 +module Excon
 +  class Connection
 +    attr_reader :connection, :proxy
@@ -1987,13 +2077,16 @@ index 0000000..1e522e6
 +    def initialize(url, params = {})
 +      uri = URI.parse(url)
 +      @connection = {
-+        :headers  => {},
-+        :host     => uri.host,
-+        :mock     => Excon.mock,
-+        :path     => uri.path,
-+        :port     => uri.port.to_s,
-+        :query    => uri.query,
-+        :scheme   => uri.scheme
++        :connect_timeout  => 60,
++        :headers          => {},
++        :host             => uri.host,
++        :mock             => Excon.mock,
++        :path             => uri.path,
++        :port             => uri.port.to_s,
++        :query            => uri.query,
++        :read_timeout     => 60,
++        :scheme           => uri.scheme,
++        :write_timeout    => 60
 +      }.merge!(params)
 +
 +      # use proxy from the environment if present
@@ -2003,7 +2096,7 @@ index 0000000..1e522e6
 +        @proxy = setup_proxy(params[:proxy])
 +      end
 +
-+      if https?
++      if @connection[:scheme] == 'https'
 +        # use https_proxy if that has been specified
 +        if ENV.has_key?('https_proxy')
 +          @proxy = setup_proxy(ENV['https_proxy'])
@@ -2040,7 +2133,9 @@ index 0000000..1e522e6
 +          params[:path].insert(0, '/')
 +        end
 +
-+        if params[:mock]
++        unless params[:mock]
++          socket.params = params
++        else
 +          for stub, response in Excon.stubs
 +            # all specified non-headers params match and no headers were specified or all specified headers match
 +            if (stub.keys - [:headers]).all? {|key| stub[key] == params[key] } &&
@@ -2124,7 +2219,6 @@ index 0000000..1e522e6
 +
 +        # write out the request, sans body
 +        socket.write(request)
-+        socket.flush
 +
 +        # write out the body
 +        if params[:body]
@@ -2179,7 +2273,7 @@ index 0000000..1e522e6
 +    def reset
 +      (old_socket = sockets.delete(@socket_key)) && old_socket.close
 +    end
-+    
++
 +    # Generate HTTP request verb methods
 +    Excon::HTTP_VERBS.each do |method|
 +      eval <<-DEF
@@ -2190,83 +2284,17 @@ index 0000000..1e522e6
 +    end
 +
 +  private
-+    def connect
-+      new_socket = open_socket
-+
-+      if https?
-+        # create ssl context
-+        ssl_context = OpenSSL::SSL::SSLContext.new
-+
-+        if Excon.ssl_verify_peer
-+          # turn verification on
-+          ssl_context.verify_mode = OpenSSL::SSL::VERIFY_PEER
-+
-+          if Excon.ssl_ca_path
-+            ssl_context.ca_path = Excon.ssl_ca_path
-+          else
-+            # use default cert store
-+            store = OpenSSL::X509::Store.new
-+            store.set_default_paths
-+            ssl_context.cert_store = store
-+          end
-+        else
-+          # turn verification off
-+          ssl_context.verify_mode = OpenSSL::SSL::VERIFY_NONE
-+        end
-+
-+        if @connection.has_key?(:client_cert) && @connection.has_key?(:client_key)
-+          ssl_context.cert = OpenSSL::X509::Certificate.new(File.read(@connection[:client_cert]))
-+          ssl_context.key = OpenSSL::PKey::RSA.new(File.read(@connection[:client_key]))
-+        end
-+
-+        new_socket = open_ssl_socket(new_socket, ssl_context)
-+      end
-+
-+      new_socket
-+    end
-+
-+    def open_ssl_socket(socket, ssl_context)
-+
-+      new_socket = OpenSSL::SSL::SSLSocket.new(socket, ssl_context)
-+      new_socket.sync_close = true
-+
-+      if @proxy
-+        new_socket << "CONNECT " << @connection[:host] << ":" << @connection[:port] << HTTP_1_1
-+        new_socket << "Host: " << @connection[:host] << ":" << @connection[:port] << CR_NL << CR_NL
-+
-+        # eat the proxy's connection response
-+        while line = new_socket.readline.strip
-+          break if line.empty?
-+        end
-+      end
-+
-+      new_socket.connect
-+      # verify connection
-+      if Excon.ssl_verify_peer
-+        new_socket.post_connection_check(@connection[:host])
-+      end
-+      new_socket
-+    end
-+
-+    def open_socket
-+      if @proxy
-+        socket = TCPSocket.open(@proxy[:host], @proxy[:port])
-+      else
-+        socket = TCPSocket.open(@connection[:host], @connection[:port])
-+      end
-+      socket
-+    end
 +
 +    def socket
-+      sockets[@socket_key] ||= connect
++      sockets[@socket_key] ||= if @connection[:scheme] == 'https'
++        Excon::SSLSocket.new(@connection, @proxy)
++      else
++        Excon::Socket.new(@connection, @proxy)
++      end
 +    end
 +
 +    def sockets
 +      Thread.current[:_excon_sockets] ||= {}
-+    end
-+
-+    def https?
-+      @connection[:scheme] == 'https'
 +    end
 +
 +    def setup_proxy(proxy)
@@ -2279,31 +2307,44 @@ index 0000000..1e522e6
 +
 +  end
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/constants.rb b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/constants.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/constants.rb b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/constants.rb
 new file mode 100644
-index 0000000..2abd8b0
+index 0000000..7ea218a
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/constants.rb
-@@ -0,0 +1,13 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/constants.rb
+@@ -0,0 +1,26 @@
 +module Excon
 +  unless const_defined?(:VERSION)
-+    VERSION = '0.6.6'
++    VERSION = '0.7.6'
 +  end
 +
 +  unless const_defined?(:CHUNK_SIZE)
 +    CHUNK_SIZE = 1048576 # 1 megabyte
 +  end
-+  
++
 +  unless const_defined?(:HTTP_VERBS)
 +    HTTP_VERBS = %w{connect delete get head options post put trace}
 +  end
++
++  unless ::IO.const_defined?(:WaitReadable)
++    class ::IO
++      module WaitReadable; end
++    end
++  end
++
++  unless ::IO.const_defined?(:WaitWritable)
++    class ::IO
++      module WaitWritable; end
++    end
++  end
++
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/errors.rb b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/errors.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/errors.rb b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/errors.rb
 new file mode 100644
-index 0000000..4c851d3
+index 0000000..d3de110
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/errors.rb
-@@ -0,0 +1,124 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/errors.rb
+@@ -0,0 +1,126 @@
 +module Excon
 +  module Errors
 +
@@ -2322,6 +2363,8 @@ index 0000000..4c851d3
 +        @socket_error = socket_error
 +      end
 +    end
++
++    class Timeout < Error; end
 +
 +    class ProxyParseError < Error; end
 +
@@ -2428,11 +2471,11 @@ index 0000000..4c851d3
 +
 +  end
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/response.rb b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/response.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/response.rb b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/response.rb
 new file mode 100644
 index 0000000..a477be6
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/lib/excon/response.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/response.rb
 @@ -0,0 +1,92 @@
 +module Excon
 +  class Response
@@ -2526,22 +2569,216 @@ index 0000000..a477be6
 +
 +  end # class Response
 +end # module Excon
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/basic_tests.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/basic_tests.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/socket.rb b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/socket.rb
 new file mode 100644
-index 0000000..b29b829
+index 0000000..c661485
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/basic_tests.rb
-@@ -0,0 +1,5 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/socket.rb
+@@ -0,0 +1,102 @@
++module Excon
++  class Socket
++
++    extend Forwardable
++
++    attr_accessor :params
++
++    def_delegators(:@socket, :close,    :close)
++    def_delegators(:@socket, :readline, :readline)
++
++    def initialize(params = {}, proxy = {})
++      @params, @proxy = params, proxy
++      @read_buffer, @write_buffer = '', ''
++
++      @sockaddr = if @proxy
++        ::Socket.sockaddr_in(@proxy[:port].to_i, @proxy[:host])
++      else
++        ::Socket.sockaddr_in(@params[:port].to_i, @params[:host])
++      end
++
++      @socket = ::Socket.new(::Socket::Constants::AF_INET, ::Socket::Constants::SOCK_STREAM, 0)
++
++      connect
++
++      @socket
++    end
++
++    def connect
++      # nonblocking connect
++      begin
++        @socket.connect_nonblock(@sockaddr)
++      rescue Errno::EINPROGRESS
++        IO.select(nil, [@socket], nil, @params[:connect_timeout])
++        begin
++          @socket.connect_nonblock(@sockaddr)
++        rescue Errno::EISCONN
++        end
++      end
++    end
++
++    def read(max_length=nil)
++      begin
++        if max_length
++          until @read_buffer.length >= max_length
++            @read_buffer << @socket.read_nonblock(max_length - @read_buffer.length)
++          end
++        else
++          while true
++            @read_buffer << @socket.read_nonblock(CHUNK_SIZE)
++          end
++        end
++      rescue OpenSSL::SSL::SSLError => error
++        if error.message == 'read would block'
++          if IO.select([@socket], nil, nil, @params[:read_timeout])
++            retry
++          else
++            raise(Excon::Errors::Timeout.new("read timeout reached"))
++          end
++        end
++      rescue Errno::EAGAIN, Errno::EWOULDBLOCK, IO::WaitReadable
++        if IO.select([@socket], nil, nil, @params[:read_timeout])
++          retry
++        else
++          raise(Excon::Errors::Timeout.new("read timeout reached"))
++        end
++      rescue EOFError
++      end
++      if max_length
++        @read_buffer.slice!(0, max_length)
++      else
++        # read until EOFError, so return everything
++        @read_buffer.slice!(0, @read_buffer.length)
++      end
++    end
++
++    def write(data)
++      @write_buffer << data
++      until @write_buffer.empty?
++        begin
++          max_length = [@write_buffer.length, Excon::CHUNK_SIZE].min
++          written = @socket.write_nonblock(@write_buffer.slice(0, max_length))
++          @write_buffer.slice!(0, written)
++        rescue OpenSSL::SSL::SSLError => error
++          if error.message == 'write would block'
++            if IO.select(nil, [@socket], nil, @params[:write_timeout])
++              retry
++            else
++              raise(Excon::Errors::Timeout.new("write timeout reached"))
++            end
++          end
++        rescue Errno::EAGAIN, Errno::EWOULDBLOCK, IO::WaitWritable
++          if IO.select(nil, [@socket], nil, @params[:write_timeout])
++            retry
++          else
++            raise(Excon::Errors::Timeout.new("write timeout reached"))
++          end
++        end
++      end
++    end
++
++  end
++end
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/ssl_socket.rb b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/ssl_socket.rb
+new file mode 100644
+index 0000000..2b0a968
+--- /dev/null
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/lib/excon/ssl_socket.rb
+@@ -0,0 +1,73 @@
++module Excon
++  class SSLSocket < Socket
++
++    # backwards compatability for 1.8.x SSLSocket (which lack nonblock)
++    unless OpenSSL::SSL::SSLSocket.public_method_defined?(:connect_nonblock)
++
++      undef_method :connect
++      def connect
++        @socket.connect(@sockaddr)
++      end
++
++      undef_method :read
++      def_delegators(:@socket, :read, :read)
++
++      undef_method :write
++      def_delegators(:@socket, :write, :write)
++
++    end
++
++    def initialize(params = {}, proxy = {})
++      super
++
++      # create ssl context
++      ssl_context = OpenSSL::SSL::SSLContext.new
++
++      if Excon.ssl_verify_peer
++        # turn verification on
++        ssl_context.verify_mode = OpenSSL::SSL::VERIFY_PEER
++
++        if Excon.ssl_ca_path
++          ssl_context.ca_path = Excon.ssl_ca_path
++        else
++          # use default cert store
++          store = OpenSSL::X509::Store.new
++          store.set_default_paths
++          ssl_context.cert_store = store
++        end
++      else
++        # turn verification off
++        ssl_context.verify_mode = OpenSSL::SSL::VERIFY_NONE
++      end
++
++      if @params.has_key?(:client_cert) && @params.has_key?(:client_key)
++        ssl_context.cert = OpenSSL::X509::Certificate.new(File.read(@params[:client_cert]))
++        ssl_context.key = OpenSSL::PKey::RSA.new(File.read(@params[:client_key]))
++      end
++
++      @socket = OpenSSL::SSL::SSLSocket.new(@socket, ssl_context)
++      @socket.sync_close = true
++
++      if @proxy
++        @socket << "CONNECT " << @params[:host] << ":" << @params[:port] << Excon::Connection::HTTP_1_1
++        @socket << "Host: " << @params[:host] << ":" << @params[:port] << Excon::Connection::CR_NL << Excon::Connection::CR_NL
++
++        # eat the proxy's connection response
++        while line = @socket.readline.strip
++          break if line.empty?
++        end
++      end
++
++      # connect the new OpenSSL::SSL::SSLSocket
++      @socket.connect
++
++      # verify connection
++      if Excon.ssl_verify_peer
++        @socket.post_connection_check(@params[:host])
++      end
++
++      @socket
++    end
++
++  end
++end
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/basic_tests.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/basic_tests.rb
+new file mode 100644
+index 0000000..5727542
+--- /dev/null
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/basic_tests.rb
+@@ -0,0 +1,11 @@
 +with_rackup('basic.ru') do
 +  Shindo.tests('Excon basics') do
 +    basic_tests
 +  end
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/header_tests.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/header_tests.rb
++
++with_rackup('ssl.ru') do
++  Shindo.tests('Excon basics (ssl)') do
++    basic_tests('https://127.0.0.1:9443')
++  end
++end
+\ No newline at end of file
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/header_tests.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/header_tests.rb
 new file mode 100644
 index 0000000..1912201
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/header_tests.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/header_tests.rb
 @@ -0,0 +1,49 @@
 +Shindo.tests('Excon response header support') do
 +
@@ -2592,11 +2829,11 @@ index 0000000..1912201
 +  end
 +
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/idempotent_tests.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/idempotent_tests.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/idempotent_tests.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/idempotent_tests.rb
 new file mode 100644
 index 0000000..69c2333
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/idempotent_tests.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/idempotent_tests.rb
 @@ -0,0 +1,56 @@
 +Shindo.tests('Excon request idempotencey') do
 +  Excon.mock = true
@@ -2654,11 +2891,11 @@ index 0000000..69c2333
 +  Excon.stubs.pop
 +  Excon.mock = false
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/proxy_tests.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/proxy_tests.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/proxy_tests.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/proxy_tests.rb
 new file mode 100644
-index 0000000..850f688
+index 0000000..89feb9e
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/proxy_tests.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/proxy_tests.rb
 @@ -0,0 +1,136 @@
 +Shindo.tests('Excon proxy support') do
 +
@@ -2768,7 +3005,7 @@ index 0000000..850f688
 +  with_rackup('proxy.ru') do
 +
 +    tests('http proxying: http://foo.com:8080') do
-+      connection = Excon.new('http://foo.com:8080', :proxy => 'http://localhost:9292')
++      connection = Excon.new('http://foo.com:8080', :proxy => 'http://127.0.0.1:9292')
 +      response = connection.request(:method => :get, :path => '/bar', :query => {:alpha => 'kappa'})
 +
 +      tests('response.status').returns(200) do
@@ -2796,11 +3033,11 @@ index 0000000..850f688
 +  end
 +
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/query_string_tests.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/query_string_tests.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/query_string_tests.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/query_string_tests.rb
 new file mode 100644
 index 0000000..21a37e6
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/query_string_tests.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/query_string_tests.rb
 @@ -0,0 +1,58 @@
 +with_rackup('query_string.ru') do
 +  Shindo.tests('Excon query string variants') do
@@ -2860,12 +3097,12 @@ index 0000000..21a37e6
 +
 +  end
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/basic.ru b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/basic.ru
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/basic.ru b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/basic.ru
 new file mode 100644
-index 0000000..504e1cd
+index 0000000..23dfb9b
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/basic.ru
-@@ -0,0 +1,10 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/basic.ru
+@@ -0,0 +1,14 @@
 +require 'sinatra'
 +
 +class App < Sinatra::Base
@@ -2873,14 +3110,18 @@ index 0000000..504e1cd
 +    headers("Custom" => "Foo: bar")
 +    'x' * value.to_i
 +  end
++
++  post('/body-sink') do
++    request.body.read.size.to_s
++  end
 +end
 +
 +run App
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/proxy.ru b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/proxy.ru
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/proxy.ru b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/proxy.ru
 new file mode 100644
 index 0000000..b329ddc
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/proxy.ru
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/proxy.ru
 @@ -0,0 +1,14 @@
 +require 'sinatra'
 +
@@ -2896,11 +3137,11 @@ index 0000000..b329ddc
 +end
 +
 +run App
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/query_string.ru b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/query_string.ru
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/query_string.ru b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/query_string.ru
 new file mode 100644
 index 0000000..394063e
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/query_string.ru
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/query_string.ru
 @@ -0,0 +1,9 @@
 +require 'sinatra'
 +
@@ -2911,11 +3152,11 @@ index 0000000..394063e
 +end
 +
 +run App
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/request_methods.ru b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/request_methods.ru
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/request_methods.ru b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/request_methods.ru
 new file mode 100644
 index 0000000..de552c8
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/request_methods.ru
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/request_methods.ru
 @@ -0,0 +1,17 @@
 +require 'sinatra'
 +
@@ -2934,11 +3175,11 @@ index 0000000..de552c8
 +end
 +
 +run App
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/response_header.ru b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/response_header.ru
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/response_header.ru b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/response_header.ru
 new file mode 100644
 index 0000000..7ec75ab
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/response_header.ru
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/response_header.ru
 @@ -0,0 +1,14 @@
 +require 'sinatra'
 +
@@ -2954,11 +3195,39 @@ index 0000000..7ec75ab
 +end
 +
 +run App
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/thread_safety.ru b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/thread_safety.ru
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/ssl.ru b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/ssl.ru
+new file mode 100644
+index 0000000..0b3700b
+--- /dev/null
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/ssl.ru
+@@ -0,0 +1,22 @@
++require 'openssl'
++require 'sinatra'
++require 'webrick'
++require 'webrick/https'
++
++class App < Sinatra::Base
++  get('/content-length/:value') do |value|
++    headers("Custom" => "Foo: bar")
++    'x' * value.to_i
++  end
++
++  post('/body-sink') do
++    request.body.read.size.to_s
++  end
++end
++
++Rack::Handler::WEBrick.run(App, {
++  :Port             => 9443,
++  :SSLCertName      => [["CN", WEBrick::Utils::getservername]],
++  :SSLEnable        => true,
++  :SSLVerifyClient  => OpenSSL::SSL::VERIFY_NONE
++})
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/thread_safety.ru b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/thread_safety.ru
 new file mode 100644
 index 0000000..8765cac
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/rackups/thread_safety.ru
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/rackups/thread_safety.ru
 @@ -0,0 +1,10 @@
 +require 'sinatra'
 +
@@ -2970,11 +3239,11 @@ index 0000000..8765cac
 +end
 +
 +run App
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/request_method_tests.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/request_method_tests.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/request_method_tests.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/request_method_tests.rb
 new file mode 100644
 index 0000000..6600cd6
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/request_method_tests.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/request_method_tests.rb
 @@ -0,0 +1,33 @@
 +Shindo.tests('Excon request methods') do
 +
@@ -3009,11 +3278,11 @@ index 0000000..6600cd6
 +  end
 +
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/stub_tests.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/stub_tests.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/stub_tests.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/stub_tests.rb
 new file mode 100644
 index 0000000..d846bec
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/stub_tests.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/stub_tests.rb
 @@ -0,0 +1,105 @@
 +Shindo.tests('Excon stubs') do
 +  Excon.mock = true
@@ -3120,21 +3389,21 @@ index 0000000..d846bec
 +  end
 +
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/test_helper.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/test_helper.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/test_helper.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/test_helper.rb
 new file mode 100644
-index 0000000..1529456
+index 0000000..a46bad8
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/test_helper.rb
-@@ -0,0 +1,64 @@
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/test_helper.rb
+@@ -0,0 +1,75 @@
 +require 'rubygems' if RUBY_VERSION < '1.9'
 +require 'bundler'
 +
 +Bundler.require(:default, :development)
 +
-+def basic_tests
++def basic_tests(url = 'http://127.0.0.1:9292')
 +  tests('GET /content-length/100') do
 +
-+    connection = Excon.new('http://127.0.0.1:9292')
++    connection = Excon.new(url)
 +    response = connection.request(:method => :get, :path => '/content-length/100')
 +
 +    tests('response.status').returns(200) do
@@ -3176,6 +3445,17 @@ index 0000000..1529456
 +      end
 +      data
 +    end
++
++  end
++
++  tests('POST /body-sink') do
++
++    connection = Excon.new(url)
++    response = connection.request(:method => :post, :path => '/body-sink', :body => 'x' * 5_000_000)
++
++    tests('response.body').returns("5000000") do
++      response.body
++    end
 +  end
 +end
 +
@@ -3190,11 +3470,11 @@ index 0000000..1529456
 +ensure
 +  Process.kill(9, pid)
 +end
-diff --git a/lib/brightbox-cli/vendor/excon-0.6.6/tests/thread_safety_tests.rb b/lib/brightbox-cli/vendor/excon-0.6.6/tests/thread_safety_tests.rb
+diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/tests/thread_safety_tests.rb b/lib/brightbox-cli/vendor/excon-0.7.6/tests/thread_safety_tests.rb
 new file mode 100644
 index 0000000..03afb8e
 --- /dev/null
-+++ b/lib/brightbox-cli/vendor/excon-0.6.6/tests/thread_safety_tests.rb
++++ b/lib/brightbox-cli/vendor/excon-0.7.6/tests/thread_safety_tests.rb
 @@ -0,0 +1,26 @@
 +with_rackup('thread_safety.ru') do
 +  Shindo.tests('Excon thread safety') do
@@ -8493,3 +8773,78 @@ index 0000000..1aeb641
 +  end
 +end
 \ No newline at end of file
+diff --git a/tools/bash_completion_script b/tools/bash_completion_script
+index ae58170..ddba085 100644
+--- a/tools/bash_completion_script
++++ b/tools/bash_completion_script
+@@ -3,9 +3,7 @@
+ 
+ __brightbox_list_ids()
+ {
+-  local plist
+-  test -d ~/.brightbox/cache && plist=`cd ~/.brightbox/cache/ && ls -t $1 2>/dev/null`
+-  COMPREPLY=( $( compgen -W '$2 $plist $3' -- "$cur" ) ) 
++  test -d ~/.brightbox/cache && COMPREPLY=( $( compgen -W '`cd ~/.brightbox/cache/ && ls $1 2>/dev/null`' -- "$cur" ) ) 
+ }
+ 
+ _brightbox()
+@@ -232,51 +230,6 @@ _brightbox()
+             ;;
+         esac
+       ;;
+-      brightbox-firewall-rules)
+-        case $command in
+-          create)
+-            case $prev in
+-              -d|--destination)
+-                __brightbox_list_ids "grp-* srv-* lba-*" "any"
+-                return 0
+-                ;;
+-              -s|--source)
+-                __brightbox_list_ids "grp-* srv-* lba-*" "any"
+-                return 0
+-                ;;
+-              -e|--dport)
+-                COMPREPLY=( $( compgen -W '22 80,443 6667-6669' -- "$cur" ) )
+-                return 0
+-                ;;
+-              -t|--sport)
+-                return 0
+-                ;;
+-              -i|--icmptype)
+-                COMPREPLY=( $( compgen -W 'echo-request echo-reply port-unreachable destination-unreachable time-exceeded' -- "$cur" ) )
+-                return 0
+-                ;;
+-              -p|--protocol)
+-                COMPREPLY=( $( compgen -W 'tcp udp icmp' -- "$cur" ) )
+-                return 0
+-                ;;
+-            esac
+-            if [[ "$cur" == -* ]] ; then
+-              COMPREPLY=( $( compgen -W '--destination --dport --icmptype --protocol --source --sport' -- "$cur" ) )
+-            else
+-              __brightbox_list_ids "fwp-*"
+-            fi
+-            ;;
+-          list)
+-              __brightbox_list_ids "fwp-*"
+-            ;;
+-          destroy|show)
+-              __brightbox_list_ids "fwr-*"
+-            ;;
+-          *)
+-            COMPREPLY=( $( compgen -W 'create destroy list show help' -- "$cur" ) )
+-            ;;
+-        esac
+-      ;;
+ 
+     esac
+ 
+@@ -289,7 +242,6 @@ complete -F _brightbox -o filenames brightbox-users
+ complete -F _brightbox -o filenames brightbox-lbs
+ complete -F _brightbox -o filenames brightbox-groups
+ complete -F _brightbox -o filenames brightbox-firewall-policies
+-complete -F _brightbox -o filenames brightbox-firewall-rules
+ 
+ # Local variables:
+ # mode: shell-script
