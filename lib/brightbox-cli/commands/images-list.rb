@@ -2,8 +2,11 @@ module Brightbox
   desc 'List available images'
   arg_name '[image-id...]'
   command [:list] do |c|
-    c.action do |global_options, options, args|
+    c.desc "Show all public images from all accounts"
+    c.switch [:a, "show-all"]
 
+    c.action do |global_options, options, args|
+      
       if args.empty?
         images = Image.find(:all)
       else
@@ -16,9 +19,12 @@ module Brightbox
 
       images = images - snapshots
 
-      images.sort! do |a,b|
-        [a.official ? 0 : 1, a.name, a.arch] <=> [b.official ? 0 : 1, b.name, b.arch]
+      unless options[:a]
+        account = Account.conn_account
+        images.reject! { |i| !i.official and i.owner_id != account.id  }
       end
+
+      images.sort! { |a, b| a.default_sort_fields <=> b.default_sort_fields }
 
       snapshots.sort! { |a, b| a.created_at <=> b.created_at }
 

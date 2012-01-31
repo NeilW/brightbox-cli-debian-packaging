@@ -104,6 +104,10 @@ module Brightbox
       end
     end
 
+    def alias
+      config[client_name]['alias']
+    end
+
     def to_fog
       raise Ini::Error, "No api client configured" unless configured?
       c = config[client_name]
@@ -120,6 +124,12 @@ module Brightbox
         :brightbox_secret => c['secret'],
         :persistent => (c["persistent"] != nil ? c["persistent"] : true)
       }
+    end
+
+    def api_hostname
+      URI(to_fog[:brightbox_api_url]).host
+    rescue StandardError
+      "api.gb1.brightbox.com"
     end
 
     def oauth_token
@@ -139,19 +149,24 @@ module Brightbox
 
     def finish
       begin
-        if configured? and @oauth_token != Api.conn.oauth_token
+        if configured? && @oauth_token != Api.conn.oauth_token
           File.open(oauth_token_filename + ".#{$$}", "w") do |f|
             f.write Api.conn.oauth_token
           end
           FileUtils.mv oauth_token_filename + ".#{$$}", oauth_token_filename
         end
+      rescue BBConfigError
       rescue StandardError => e
         warn "Error writing auth token #{oauth_token_filename}: #{e.class}: #{e}"
       end
     end
 
     def configured?
-      client_name != nil and !clients.empty?
+      configured = client_name != nil && !clients.empty?
+      if configured && (config[client_name].nil? || config[client_name].empty?)
+        raise BBConfigError, "client id or alias #{client_name.inspect} not defined in config"
+      end
+      configured
     end
 
     private

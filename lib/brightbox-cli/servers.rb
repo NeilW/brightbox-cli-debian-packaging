@@ -45,6 +45,7 @@ module Brightbox
       a[:zone] = zone && zone['handle']
       a[:hostname] = hostname
       a[:public_hostname] = public_hostname unless cloud_ips.empty?
+      a[:ipv6_hostname] = ipv6_hostname if interfaces.any? {|i| i['ipv6_address'] }
       a
     end
 
@@ -60,13 +61,16 @@ module Brightbox
     end
 
     def hostname
-      "#{id}.gb1.brightbox.com"
+      "#{id}.#{Brightbox::CONFIG.api_hostname}"
     end
 
     def public_hostname
       "public.#{hostname}"
     end
-  end
 
+    def ipv6_hostname
+      "ipv6.#{hostname}"
+    end
+  end
 
 end

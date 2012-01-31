@@ -52,11 +52,5 @@ module Brightbox
       server_ids.respond_to?(:join) ? server_ids.join(" ") : ""
     end
 
-    def server_ids
-      if attributes["servers"]
-        @server_ids ||= attributes["servers"].collect { |s| s["id"] }
-      end
-    end
-
   end
 end
