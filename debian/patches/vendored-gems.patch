@@ -1,5 +1,5 @@
 diff --git a/brightbox-cli.gemspec b/brightbox-cli.gemspec
-index 33ad03d..c0ddfde 100644
+index f4de4ca..6bd3458 100644
 --- a/brightbox-cli.gemspec
 +++ b/brightbox-cli.gemspec
 @@ -21,7 +21,7 @@ Gem::Specification.new do |s|
@@ -10,7 +10,7 @@ index 33ad03d..c0ddfde 100644
 +  s.add_dependency 'excon', '~>0.7.3'
    s.add_dependency 'builder'
    s.add_dependency 'mime-types'
-   s.add_dependency 'net-scp', '~> 1.0.4'
+   s.add_dependency 'net-ssh', '~> 2.2.1'
 diff --git a/lib/brightbox-cli/vendor/excon-0.7.6/Gemfile b/lib/brightbox-cli/vendor/excon-0.7.6/Gemfile
 new file mode 100644
 index 0000000..4f71f9c
@@ -8773,3 +8773,12 @@ index 0000000..1aeb641
 +  end
 +end
 \ No newline at end of file
+diff --git a/lib/brightbox-cli/version.rb b/lib/brightbox-cli/version.rb
+index 5bead50..0b96285 100644
+--- a/lib/brightbox-cli/version.rb
++++ b/lib/brightbox-cli/version.rb
+@@ -1,3 +1,3 @@
+ module Brightbox
+-  VERSION = "0.17.0" unless defined?(Brightbox::VERSION)
++  VERSION = "0.16.0" unless defined?(Brightbox::VERSION)
+ end
