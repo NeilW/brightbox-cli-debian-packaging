@@ -1,6 +1,13 @@
 require 'hirb'
 
 module Brightbox
+
+  # Hack to set ascii art table cell width due to limitations in Hirb
+  class Hirb::Helpers::Table
+    remove_const :BORDER_LENGTH
+    BORDER_LENGTH = 2
+  end
+
   # Remove most of the ascii art table output
   class SimpleTable < Hirb::Helpers::Table
     def render_table_header
@@ -25,6 +32,12 @@ module Brightbox
         }.join('  ')
       end
     end
+
+  def enforce_field_constraints
+    max_fields.each {|k,max| @field_lengths[k] = max if @field_lengths[k].to_i > max }
+    # Never shrink the id field
+    @field_lengths[:id] = IDENTIFIER_SIZE if @field_lengths[:id]
+  end
 
   end
 
