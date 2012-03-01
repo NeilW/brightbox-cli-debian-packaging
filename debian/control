@@ -1,52 +1,27 @@
 Source: brightbox-cli
 Section: ruby
-Priority: extra
+Priority: optional
 Maintainer: John Leach <john@brightbox.co.uk>
-Build-Depends: cdbs, debhelper (>= 5.0.0), ruby-pkg-tools (>= 0.14), ruby1.8-dev, pkg-config, ruby1.8, graphviz, quilt, bash-completion
-Standards-Version: 3.9.1
-
-Package: bbcloud
-Depends: brightbox-cli (= ${binary:Version}), ${misc:Depends}
-Architecture: all
-Section: oldlibs
-Description: Transitional package for brightbox-cli
- This is a transitional package and can be safely removed after
- brightbox-cli is installed.
+Uploaders: Neil Wilson <neil@aldur.co.uk>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.2.6~), rake(>= 0.8.0~), ruby-rspec, ruby-mocha, bash-completion
+Standards-Version: 3.9.2
+Vcs-Git: git://github.com/brightbox/brightbox-cli.git
+Vcs-Browser: https://github.com/brightbox/brightbox-cli
+Homepage: http://docs.brightbox.com/cli
+XS-Ruby-Versions: all
 
 Package: brightbox-cli
-Replaces: bbcloud (<< 0.13)
-Breaks: bbcloud (<< 0.13)
 Architecture: all
-Depends: libbrightbox-cli-ruby (= ${binary:Version}), ${misc:Depends}
-Description: CLI for the Brightbox cloud computing platform
- brightbox-cli provides tools for interacting with the Brightbox cloud
- platform
- .
- This package is a dependency package. 
-
-Package: libbrightbox-cli-ruby
-Replaces: libbbcloud-ruby (<< 0.13)
-Breaks: libbbcloud-ruby (<< 0.13)
-Architecture: all
-Depends: libbrightbox-cli-ruby1.8(= ${binary:Version}), ${misc:Depends}
-Description: CLI for the Brightbox cloud computing platform
- brightbox-cli provides tools for interacting with the Brightbox cloud
- platform
- .
- This package is a dependency package, which depends on the package
- containing the actual brightbox-cli package for the default Ruby version
- (currently 1.8).
-
-Package: libbrightbox-cli-ruby1.8
-Replaces: libbbcloud-ruby1.8 (<< 0.13)
-Breaks: libbbcloud-ruby1.8 (<< 0.13)
-Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, ruby1.8,
- libnet-ssh2-ruby, libnokogiri-ruby, libjson-ruby, libmime-types-ruby,
- libhmac-ruby, libbuilder-ruby, libopenssl-ruby1.8
-Description: CLI for the Brightbox cloud computing platform
- brightbox-cli provides tools for interacting with the Brightbox cloud
- platform
- .
- This package contains the CLI for the Brightbox cloud computing platform for 
- Ruby 1.8.
+XB-Ruby-Versions: ${ruby:Versions}
+Provides: libbrightbox-cli-ruby, libbrightbox-cli-ruby1.8, libbbcloud-ruby, libbbcloud-ruby1.8, bbcloud
+Breaks: libbrightbox-cli-ruby (<< 0.17.2), libbrightbox-cli-ruby1.8 (<< 0.17.2), libbbcloud-ruby (<< 0.17.2), libbbcloud-ruby1.8 (<< 0.17.2), bbcloud (<< 0.17.2)
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter,
+ ruby-json (>= 1.5.3~), libbuilder-ruby1.8 | libbuilder-ruby1.9.1,
+ ruby-excon (>=0.9.0~), ruby-formatador (>= 0.2.0~), ruby-mime-types,
+ ruby-net-ssh (>= 1:2.1.3), ruby-net-scp (>= 1.0.4~),
+ libnokogiri-ruby1.8 (>=1.4.0) | libnokogiri-ruby1.9.1 (>= 1.4.0),
+ ruby-hmac, ruby-hirb (>= 0.6.0~)
+# json (~> 1.5.3), builder (>= 0), excon (~> 0.9.0), formatador (~> 0.2.0), mime-types (>= 0), net-ssh (>= 2.1.3), net-scp (~> 1.0.4), nokogiri (>= 1.4.0), ruby-hmac (>= 0), hirb (~> 0.6.0), rake (~> 0.8.0, development), vcr (>= 0, development), rspec (>= 0, development), mocha (>= 0, development)
+Description: Brightbox cloud management system
+ brightbox-cli provides tools for interacting with the Brightbox cloud platform.

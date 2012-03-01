@@ -1,3 +1,13 @@
+brightbox-cli (0.17.2-0ubuntu1~oneiric1) oneiric; urgency=low
+
+  * New upstream release
+  * Switch packaging to gem2deb
+  * Remove vendored-gems patch
+  * Remove rubygems patches
+  * Update copyright file to Deb5
+
+ -- Neil Wilson <neil@aldur.co.uk>  Tue, 28 Feb 2012 19:05:03 +0000
+
 brightbox-cli (0.17.1-0ubuntu1) oneiric; urgency=low
 
   * New upstream release

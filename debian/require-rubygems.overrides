@@ -1,0 +1,8 @@
+debian/brightbox-cli/usr/lib/ruby/vendor_ruby/brightbox-cli/vendor/gli/lib/support/scaffold.rb
+debian/brightbox-cli/usr/lib/ruby/vendor_ruby/brightbox-cli/vendor/fog/lib/fog/core.rb
+debian/brightbox-cli/usr/lib/ruby/vendor_ruby/brightbox-cli/vendor/fog/benchs/fog_vs.rb
+debian/brightbox-cli/usr/lib/ruby/vendor_ruby/brightbox-cli/vendor/fog/benchs/parse_vs_push.rb
+debian/brightbox-cli/usr/lib/ruby/vendor_ruby/brightbox-cli/vendor/fog/examples/dns_tests.rb
+debian/brightbox-cli/usr/lib/ruby/vendor_ruby/brightbox-cli/vendor/fog/examples/storage_tests.rb
+debian/brightbox-cli/usr/lib/ruby/vendor_ruby/brightbox-cli/vendor/fog/examples/compute_tests.rb
+
