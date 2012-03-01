@@ -1,4 +1,4 @@
-brightbox-cli (0.17.2-0ubuntu1~oneiric1) oneiric; urgency=low
+brightbox-cli (0.17.2-0ubuntu0) oneiric; urgency=low
 
   * New upstream release
   * Switch packaging to gem2deb
