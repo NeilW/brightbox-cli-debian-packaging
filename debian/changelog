@@ -1,3 +1,9 @@
+brightbox-cli (0.18.0-0ubuntu1) precise; urgency=low
+
+  * New upstream release 
+
+ -- Neil Wilson <neil@aldur.co.uk>  Wed, 18 Apr 2012 10:46:54 +0100
+
 brightbox-cli (0.17.5-0ubuntu1) oneiric; urgency=low
 
   * New upstream release
