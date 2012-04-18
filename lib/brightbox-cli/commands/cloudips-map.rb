@@ -2,7 +2,7 @@ module Brightbox
   desc 'map Cloud IPs'
   arg_name 'cloudip-id destination'
   command [:map] do |c|
-    c.desc "Unmap mapped ips before remapping them"
+    c.desc "Unmap mapped IPs before remapping them"
     c.switch [:u, "unmap"]
 
     c.action do |global_options,options,args|
@@ -28,6 +28,9 @@ module Brightbox
       when /^lba\-/
         lb = LoadBalancer.find destination_id
         info "Mapping #{ip} to load balancer #{lb}"
+      when /grp\-/
+        group = ServerGroup.find destination_id
+        info "Mapping #{ip} to server group #{group}"
       else
         raise "Unknown destination '#{destination_id}'"
       end
@@ -41,7 +44,7 @@ module Brightbox
             ip.reload
           end
         else
-          raise "Refusing to map already mapped ip #{ip}"
+          raise "Refusing to map already mapped IP #{ip}"
         end
       end
 
