@@ -1,3 +1,9 @@
+brightbox-cli (0.18.1-0ubuntu1) quantal; urgency=low
+
+  * New upstream release 
+
+ -- Neil Wilson <neil@aldur.co.uk>  Wed, 20 Jun 2012 10:38:05 +0100
+
 brightbox-cli (0.18.0-0ubuntu1) precise; urgency=low
 
   * New upstream release 
